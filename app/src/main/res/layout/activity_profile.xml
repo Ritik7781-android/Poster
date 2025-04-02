@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C133D"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Top Content -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#2C133D"
+        android:padding="24dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/baseline_person_24"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="109dp"
+            android:background="@drawable/circle_background"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Photo Hint -->
+        <TextView
+            android:id="@+id/textPhotoHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add your photo"
+            android:textColor="#FFA726"
+            android:textSize="21sp"
+            android:layout_marginTop="29dp" />
+
+        <!-- Name Input -->
+
+        <!-- Continue Button -->
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Enter your name"
+            android:padding="16dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:textSize="26sp"
+            android:backgroundTint="#FFA726"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="65dp" />
+    </LinearLayout>
+
+    <!-- Need Help text just above the checkbox -->
+    <TextView
+        android:id="@+id/textNeedHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Need Help?"
+        android:textSize="26sp"
+        android:textColor="#FFFFFF"
+        android:layout_above="@id/whatsappSection"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginBottom="38dp" />
+
+    <!-- WhatsApp Section at bottom -->
+    <LinearLayout
+        android:id="@+id/whatsappSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <!-- WhatsApp Icon -->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/th" />
+
+        <!-- WhatsApp Checkbox -->
+        <CheckBox
+            android:id="@+id/checkboxWhatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Send me updates on WhatsApp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:buttonTint="@android:color/white"
+            android:background="#8A8686"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingStart="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>
